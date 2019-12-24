@@ -16,32 +16,28 @@ using namespace std;
 
 int main() {
 
-	int generations = 0;
-
 	// Generate population
-	cout << "Starting setup.";
+	cout << "Starting setup." << endl;
 	setup();
-	cout << "Successfull setup.";
+	cout << "Successfull setup.\n" << endl;
 
 	while(true) {
 
-		generations++;
-		cout << "Successful generation.";
-
-		// Breed population
-		breed();
-		cout << "Successfully bred.";
+		generation++;
+		//cout << "Successful generation | ";
 
 		// Score population
 		score();
-		cout << "Successful scoring";
+		//cout << "Successful scoring" << endl;
 
-		// Check to see if complete
+		// Check to see if we found it
 		if(check()) {
 			break;
 		}
-		cout << "Target not found.";
+
+		// Breed population
+		breed();
 	}
 
-	cout << "Ended in " << generations << " generations.";
+	return 0;
 }

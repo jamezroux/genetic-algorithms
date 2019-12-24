@@ -21,6 +21,4 @@ extern int mother;
 extern int father;
 extern int midpoint;
 
-
-
 #endif
